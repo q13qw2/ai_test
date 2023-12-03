@@ -38,13 +38,13 @@ def test_gen3():
         'format_instructions': parser.get_format_instructions()
     })
 
-    r=parser.parse(output)
+    r=parser.parse(output.content)
 
     print(r.__class__)
     print(r)
 
-    with open('po.yaml') as f:
-        yaml.dump(f,r)
+    with open('po.yaml','w') as f:
+        yaml.dump(r,f,allow_unicode=True)
 
 if __name__ == '__main__':
     test_gen3()
