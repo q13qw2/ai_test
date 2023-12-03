@@ -27,6 +27,7 @@ def test_gen3():
             # ("human", "{query} {format_instructions}"),
             ("human", "{format_instructions}"),
         ]
+
     )
 
     chain = chat_template | chat_llm
