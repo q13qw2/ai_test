@@ -12,7 +12,6 @@ class PageObjectModelParser(PydanticOutputParser):
          po_prompt = dedent(f"""
          以上是一段html代码，代表了某个网页。基于上述代码，请创建一个自动化测试的Page Object类(Java)
          
-         
         {prompt}
          """)
          return  po_prompt
